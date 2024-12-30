@@ -19,7 +19,11 @@ export default function Home() {
     </div>
   </nav>
 
- <button className="bg-red-500 text-blue-500 text-2xl w-32 rounded-xl border-none h-10 hover:text-green-400 cursor-pointer"> Youtube </button>
+<div className="flex gap-x-5">
+<button className="bg-black text-white text-lg w-32 rounded-xl border border-gray-300 h-11 cursor-pointer"> Youtube </button>
+<button className="bg-white text-blue-500 text-lg w-32 rounded-xl border border-black h-11 cursor-pointer"> Youtube </button>
+</div>
+ 
   </>
   );
 }
