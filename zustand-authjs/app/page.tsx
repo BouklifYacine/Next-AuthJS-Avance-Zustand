@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <>
@@ -41,10 +43,8 @@ export default function Home() {
         </div>
 
         <div className="flex justify-end gap-x-5 mr-9 ">
-        <button className="bg-blue-500 border border-black rounded-xl w-24 h-12 text-white font-bold hover:bg-blue-700 transition-all duration-200 ease-in-out shadow-2xl">
-  Editer
-</button>
-          <button className="bg-red-500 border border-black rounded-2xl w-24 h-12 font-bold">Supprimer </button>
+      <Button>Bouton 1</Button>
+      <Button>Bouton 2</Button>
         </div>
       </div>
     </>
