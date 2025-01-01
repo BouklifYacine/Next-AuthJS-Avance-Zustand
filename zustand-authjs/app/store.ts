@@ -1,5 +1,6 @@
-"use client"
+
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface Zustand {
     compteur : number, 
@@ -7,10 +8,15 @@ interface Zustand {
     reset : () => void 
 }
 
-const useCompteurStore  = create<Zustand>(set => ({
+const useCompteurStore  = create<Zustand>()(
+    persist(
+    set => ({
     compteur : 0, 
     augmenter : () => set(store => ({ compteur : store.compteur + 1})),
     reset : () => set(() => ({ compteur : 0}))
-}))
+}), 
+{ name : "Competeur "}
+)
+)
 
 export default useCompteurStore
